@@ -4,6 +4,7 @@ import com.example.bank_api.exception.AccountNotFoundException;
 import com.example.bank_api.model.Account;
 import com.example.bank_api.repository.AccountRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,24 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
+/**
+ * REST Controller for managing bank accounts.
+ * 
+ * Provides endpoints for creating accounts, performing deposits and withdrawals,
+ * viewing account details, and managing account information.
+ * 
+ * All endpoints are prefixed with "/accounts" and return Account objects or collections thereof.
+ * 
+ * Validation rules:
+ * - Owner names cannot be null or empty
+ * - Transaction amounts must be at least 0.01
+ * - Account balance cannot go below 0.0
+ * 
+ * @see Account
+ * @see AccountRepository
+ * @see AccountNotFoundException
+ * @CrossOrigin(origins = "http://localhost:3000") for allowing cross-origin requests from a frontend application running on localhost:3000
+ */
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {
