@@ -31,6 +31,7 @@ import org.springframework.web.server.ResponseStatusException;
  * @see AccountNotFoundException
  * @CrossOrigin(origins = "http://localhost:3000") for allowing cross-origin requests from a frontend application running on localhost:3000
  */
+@CrossOrigin(origins = "")
 @RestController
 @RequestMapping("/accounts")
 public class AccountController {

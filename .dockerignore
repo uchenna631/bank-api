@@ -1,0 +1,12 @@
+# .dockerignore for bank-api
+# Exclude build, test, and IDE files from Docker build context
+/target
+/.mvn
+/.idea
+/.vscode
+*.iml
+*.log
+*.md
+HELP.md
+README.md
+mvnw.cmd

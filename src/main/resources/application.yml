@@ -3,7 +3,7 @@ spring:
     name: bank-api
   data:
     mongodb:
-      uri: ${MONGODB_URI:mongodb://localhost:27017/bank}
+      uri: ${MONGO_URI:mongodb://localhost:27017/bank}
   jpa:
     open-in-view: false
 
